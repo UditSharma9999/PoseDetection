@@ -1,12 +1,3 @@
-// 1. Install dependencies DONE
-// 2. Import dependencies DONE
-// 3. Setup webcam and canvas DONE
-// 4. Define references to those DONE
-// 5. Load handpose DONE
-// 6. Detect function DONE
-// 7. Drawing utilities DONE
-// 8. Draw functions DONE
-
 import React, { useRef } from "react";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
@@ -61,8 +52,9 @@ function HandPoseDetection() {
   return (
     <div className="App">
       <header className="App-header">
-        <Webcam
+      <Webcam
           ref={webcamRef}
+          muted={true} 
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -71,8 +63,8 @@ function HandPoseDetection() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 640,
-            height: 480,
+            width: 1000,
+            height: 650,
           }}
         />
 
@@ -85,7 +77,7 @@ function HandPoseDetection() {
             left: 0,
             right: 0,
             textAlign: "center",
-            zindex: 9,
+            zindex: 8,
             width: 640,
             height: 480,
           }}

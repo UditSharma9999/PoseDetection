@@ -8,8 +8,6 @@
 // 8. Draw functions DONE
 
 
-
-
 import React, { useRef } from "react";
 import "./Main.css";
 import * as posenet from "@tensorflow-models/posenet";
@@ -74,8 +72,9 @@ function PosenetRealtime() {
   return (
     <div className="App">
       <header className="App-header">
-        <Webcam
+      <Webcam
           ref={webcamRef}
+          muted={true} 
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -84,8 +83,8 @@ function PosenetRealtime() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 700,
-            height: 800,
+            width: 1000,
+            height: 650,
           }}
         />
 
@@ -98,9 +97,9 @@ function PosenetRealtime() {
             left: 0,
             right: 0,
             textAlign: "center",
-            zindex: 9,
-            width: 700,
-            height: 700,
+            zindex: 8,
+            width: 640,
+            height: 480,
           }}
         />
       </header>

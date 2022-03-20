@@ -5,7 +5,7 @@ import Webcam from "react-webcam";
 import "./Main.css";
 import { drawRect } from "./utilities";
 
-function Main() {
+function RealTimeObjectDetection() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -88,4 +88,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default RealTimeObjectDetection;

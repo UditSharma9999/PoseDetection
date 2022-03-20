@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 
@@ -7,17 +7,17 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-        <div className="App-link">
-          Hello React
-        </div>
-        <Link to="/About">About</Link>
-        <Link to="/Contact">Contact</Link>
-        <Link to="/RealTimeObjectDetection">RealTimeObjectDetection</Link>
-        {/* <Link to="/RealTimeBodySegmentation">RealTimeBodySegmentation</Link> */}
-        <Link to="/PosenetRealtime">PosenetRealtime</Link>
-        <Link to="/HandPoseDetection">HandPoseDetection</Link>
-        {/* <Link to="/GestureRecognition">GestureRecognition</Link> */}
-        <Link to="/FacialLandmarkDetection">FacialLandmarkDetection</Link>
+        <Link to="/RealTimeObjectDetection" target="_blank" rel="noopener noreferrer">RealTimeObjectDetection</Link>
+
+        <Link to="/PosenetRealtime" target="_blank" rel="noopener noreferrer">PosenetRealtime</Link>
+
+        <Link to="/HandPoseDetection" target="_blank" rel="noopener noreferrer">HandPoseDetection</Link>
+
+        <Link to="/FacialLandmarkDetection" target="_blank" rel="noopener noreferrer">FacialLandmarkDetection</Link>
+
+        <Link to="/GestureRecognition" target="_blank" rel="noopener noreferrer">GestureRecognition</Link>
+
+        <Link to="/RealTimeBodySegmentation" target="_blank" rel="noopener noreferrer">RealTimeBodySegmentation</Link>
         
       </header>
     </div>

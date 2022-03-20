@@ -9,9 +9,10 @@
 import React, { useRef, useState, useEffect } from "react";
 ///////// NEW STUFF ADDED USE STATE
 
+// import logo from './logo.svg';
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
-import "./Main.css";
+import "./App.css";
 import { drawHand } from "./utilities";
 
 ///////// NEW STUFF IMPORTS
@@ -100,6 +101,7 @@ function GestureRecognition() {
       <header className="App-header">
         <Webcam
           ref={webcamRef}
+          muted={true} 
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -108,8 +110,8 @@ function GestureRecognition() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 640,
-            height: 480,
+            width: 1000,
+            height: 650,
           }}
         />
 
@@ -122,22 +124,22 @@ function GestureRecognition() {
             left: 0,
             right: 0,
             textAlign: "center",
-            zindex: 9,
+            zindex: 8,
             width: 640,
             height: 480,
           }}
         />
         {/* NEW STUFF */}
         {emoji !== null ? (
-          <img
+          <img  
+            alt="emoje"
             src={images[emoji]}
-            alt="emoji"
             style={{
               position: "absolute",
               marginLeft: "auto",
               marginRight: "auto",
               left: 400,
-              bottom: 500,
+              top:10,
               right: 0,
               textAlign: "center",
               height: 100,

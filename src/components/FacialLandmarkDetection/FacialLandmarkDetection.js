@@ -11,13 +11,13 @@
 
 import React, { useRef, useEffect } from "react";
 import "./Main.css";
+import Webcam from "react-webcam";
+import { drawMesh } from "./utilities";
 // OLD MODEL
 //import * as facemesh from "@tensorflow-models/facemesh";
 
 // NEW MODEL
 import * as facemesh from "@tensorflow-models/face-landmarks-detection";
-import Webcam from "react-webcam";
-import { drawMesh } from "./utilities";
 
 function FacialLandmarkDetection() {
   const webcamRef = useRef(null);
@@ -30,6 +30,7 @@ function FacialLandmarkDetection() {
     //   inputResolution: { width: 640, height: 480 },
     //   scale: 0.8,
     // });
+
     // NEW MODEL
     const net = await facemesh.load(facemesh.SupportedPackages.mediapipeFacemesh);
     setInterval(() => {
